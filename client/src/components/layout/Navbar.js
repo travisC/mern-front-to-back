@@ -1,49 +1,36 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Navbar extends Component {
-  render() {
-    return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
-        <div className="container">
-          <a className="navbar-brand" href="landing.html">
-            DevConnector
+const Navbar = () => {
+  return (
+    <nav className="navbar bg-dark">
+      <h1>
+        <a href="index.html">
+          <i className="fas fa-code" /> DevConnector
+        </a>
+      </h1>
+      <ul>
+        <li>
+          <a href="profiles.html">Developers</a>
+        </li>
+        <li>
+          <a href="posts.html">Posts</a>
+        </li>
+        <li>
+          |
+          <a href="dashboard.html" title="Dashboard">
+            <i className="fas fa-user" />{" "}
+            <span className="hide-sm">Dashboard</span>
           </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#mobile-nav"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-
-          <div className="collapse navbar-collapse" id="mobile-nav">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="profiles.html">
-                  {" "}
-                  Developers
-                </a>
-              </li>
-            </ul>
-
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="register.html">
-                  Sign Up
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="login.html">
-                  Login
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    );
-  }
-}
+        </li>
+        <li>
+          <a href="login.html" title="Logout">
+            <i className="fas fa-sign-out-alt" />{" "}
+            <span className="hide-sm">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
 export default Navbar;
